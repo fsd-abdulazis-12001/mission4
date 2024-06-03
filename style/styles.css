@@ -1,0 +1,211 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6347;
+}
+h2 {
+    text-align: center;
+ }
+.profile p {
+    margin: 5px 0;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+#taskInput {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#priorityLevel {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submitTask {
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitTask:hover {
+    background-color: #e5533d;
+}
+
+.todo-list, .done-list {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.deadline {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+    transition: all 0.3s ease-in-out;
+}
+
+.success {
+    color: green;
+    font-weight: 55;
+}
+.done {
+    color: rgb(3, 3, 3);
+    font-weight: 55;
+}
+.late {
+    color: red;
+    font-weight: 55;
+}
+
+table {
+    
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+ 
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 1re;
+}
+
+#doneList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#doneList li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#deleteAll {
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#deleteAll:hover {
+    background-color: #e5533d;
+}
+
+.topsec {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  
+    color: #e5533d;
+     font-weight: bold;
+    font-size: 1.5rem;
+}
+.topsec span{
+    text-align: right;
+    width: 100px;
+     
+}
+.topsec:hover .tooltiptext {
+    visibility: visible;
+    font-size: 10px;
+  }
+  .red-text {
+    color: red;
+  }
+  .green-text {
+    color: green;
+  }
+.topsec .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+.hint {
+    display: none;
+    text-align: center;
+    position: relative;
+    color: green;
+    border-bottom: 1px dotted black;  
+    cursor: help;  
+}
+
+.hint:hover::after {
+    content: "Kak, Kalo Aku Dapat Nilai 100, di kolom feedback nanti tambahin kalimant 'MEnyala Abangku🔥' biar makin semangat, kalo dibolehin tapi hehe";  
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);  
+    color: white;  
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;  
+    white-space: nowrap;  
+    font-size: 14px;
+    
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
