@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     deleteAllButton.addEventListener('click', function() {
         todoTable.innerHTML = '';
         doneList.innerHTML = '';
-        hint.style.display = 'inline-block';
+       // hint.style.display = 'inline-block';
     });
 
     //interval 1 detik untuk ngecheck sudah lewat deadline atau tidak, hijau = aman, merah = telat
