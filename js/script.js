@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const todoTable = document.getElementById('todoTable').getElementsByTagName('tbody')[0];
     const doneList = document.getElementById('doneList');
     const deleteAllButton = document.getElementById('deleteAll');
-    const hint = document.getElementById('hint');
-
+    
     function sortTodoTable() {
         const rows = Array.from(todoTable.rows);
         rows.sort((a, b) => {
@@ -123,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     deleteAllButton.addEventListener('click', function() {
         todoTable.innerHTML = '';
         doneList.innerHTML = '';
-        hint.style.display = 'inline-block';
+        
     });
 
     //interval 1 detik untuk ngecheck sudah lewat deadline atau tidak, hijau = aman, merah = telat
