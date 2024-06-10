@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const todoTable = document.getElementById('todoTable').getElementsByTagName('tbody')[0];
     const doneList = document.getElementById('doneList');
     const deleteAllButton = document.getElementById('deleteAll');
-   
+
     function sortTodoTable() {
         const rows = Array.from(todoTable.rows);
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dueDate = new Date(dueDateInput.value);
         const currentDate = new Date();
         const dateString = currentDate.toLocaleDateString() + ' ' + currentDate.toLocaleTimeString();
-       
+
         if (taskText !== '' && dueDateInput.value) {
             const newRow = todoTable.insertRow();
             newRow.classList.add(priority);
@@ -123,12 +123,10 @@ document.addEventListener('DOMContentLoaded', function() {
     deleteAllButton.addEventListener('click', function() {
         todoTable.innerHTML = '';
         doneList.innerHTML = '';
-        hint.style.display = 'inline-block';
+        
     });
 
     //interval 1 detik untuk ngecheck sudah lewat deadline atau tidak, hijau = aman, merah = telat
     setInterval(checkForLateTasks, 1000);  
 
-    
-   
 });
