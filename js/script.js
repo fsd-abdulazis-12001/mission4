@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const todoTable = document.getElementById('todoTable').getElementsByTagName('tbody')[0];
     const doneList = document.getElementById('doneList');
     const deleteAllButton = document.getElementById('deleteAll');
-    const hint = document.getElementById('hint');
-
+   
     function sortTodoTable() {
         const rows = Array.from(todoTable.rows);
+
         rows.sort((a, b) => {
             const priorityOrder = ['high', 'medium', 'low', 'late', 'done'];
             const priorityA = priorityOrder.indexOf(a.classList[0]);
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dueDate = new Date(dueDateInput.value);
         const currentDate = new Date();
         const dateString = currentDate.toLocaleDateString() + ' ' + currentDate.toLocaleTimeString();
-        hint.style.display = 'none';
+       
         if (taskText !== '' && dueDateInput.value) {
             const newRow = todoTable.insertRow();
             newRow.classList.add(priority);
@@ -130,12 +130,5 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(checkForLateTasks, 1000);  
 
     
-    //tooltip untuk kak mentor moga kebaca 😄
-    hint.addEventListener('mouseenter', function() {
-        hint.style.cursor = 'help';
-    });
-
-    hint.addEventListener('mouseleave', function() {
-        hint.style.cursor = 'default';
-    });
+   
 });
