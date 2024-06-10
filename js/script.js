@@ -129,13 +129,5 @@ document.addEventListener('DOMContentLoaded', function() {
     //interval 1 detik untuk ngecheck sudah lewat deadline atau tidak, hijau = aman, merah = telat
     setInterval(checkForLateTasks, 1000);  
 
-    
-    //tooltip untuk kak mentor moga kebaca 😄
-    hint.addEventListener('mouseenter', function() {
-        hint.style.cursor = 'help';
-    });
-
-    hint.addEventListener('mouseleave', function() {
-        hint.style.cursor = 'default';
-    });
+     
 });
