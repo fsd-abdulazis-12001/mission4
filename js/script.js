@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dueDate = new Date(dueDateInput.value);
         const currentDate = new Date();
         const dateString = currentDate.toLocaleDateString() + ' ' + currentDate.toLocaleTimeString();
-        hint.style.display = 'none';
+  
         if (taskText !== '' && dueDateInput.value) {
             const newRow = todoTable.insertRow();
             newRow.classList.add(priority);
